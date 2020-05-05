@@ -197,12 +197,7 @@
     if (_cacheJson) {
         return _cacheJson;
     } else {
-        NSString *path = [self cacheFilePath];
-        NSFileManager *fileManager = [NSFileManager defaultManager];
-        if ([fileManager fileExistsAtPath:path isDirectory:nil] == YES) {
-            _cacheJson = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
-        }
-        return _cacheJson;
+        return nil;;
     }
 }
 
